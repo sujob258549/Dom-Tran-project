@@ -85,7 +85,7 @@
             </div>
         </div>
     </header>
-    <main class="">
+    <main id="main-section" class="">
 
         <!-- banner section -->
         <div class="container mx-auto max-w-[90%] lg:max-w-[80%] md:pb-0 pb-5">
@@ -246,7 +246,7 @@
                     </div>
                 </div>
 
-                <div class="flex flex-col lg:flex-row gap-10 p-5 mt-10 shadow-2xl rounded-xl bg-white">
+                <div class="flex flex-col lg:flex-row gap-10 p-5 md:pt-10 md:pb-20 md:px-10 mt-10 shadow-2xl rounded-xl bg-white">
                     <div class=" w-full lg:w-[60%]">
                         <h2 class="text-2xl font-semibold">Select Your Seat</h2>
                         <div class="flex justify-between border-y-2 border-dashed py-5 my-5 ">
@@ -434,11 +434,11 @@
                         <div class="p-5 bg-slate-100 rounded-xl">
                             <div class="flex justify-between">
                                <div>
-                                <p class="font-inter font-medium">Seat <span></span></p>
+                                <p class="font-inter font-medium">Seat<span class="" id="sit-count">0</span></p>
                                 <p id="sit-list"></p>
                                </div>
                                <div>
-                                <p  class="font-inter font-medium">Class <span></span></p>
+                                <p  class="font-inter font-medium">Your Sit<span></span></p>
                                 <p id="sit-class"></p>
                                </div>
                                 <div>
@@ -455,16 +455,16 @@
                                     <p class="text-xl text-black font-semibold"><span id="total-prise"></span> BDT</p>
                                 </div>
                                 <div class="join mt-6 w-full pb-5">
-                                    <input id="input-fild" type="text" placeholder="Have any copupon?"
+                                    <input id="input-field" type="text" placeholder="Have any copupon?"
                                         class="input input-bordered w-[100%] join-item" />
-                                    <button id="input-button"
+                                    <button disabled id="apply-button"
                                         class="btn text-white hover:bg-[#1cd10067]  bg-[#1DD100] join-item">Apply</button>
                                 </div>
                                 <div class="flex justify-between">
                                     <p class="text-xl font-semibold">Grand Total</p>
                                     <p class="text-xl text-black font-semibold"><span id="grand-prise"></span> BDT</p>
                                 </div>
-                                <form action="" class="pt-5">
+                                <div class="pt-5">
 
                                     <div class="py-3"><label for="">Passenger Name*</label></div>
                                     <label class="input input-bordered flex items-center gap-2">
@@ -473,13 +473,16 @@
                                             <path
                                                 d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12.735 14c.618 0 1.093-.561.872-1.139a6.002 6.002 0 0 0-11.215 0c-.22.578.254 1.139.872 1.139h9.47Z" />
                                         </svg>
-                                        <input type="text" class="grow" placeholder="Enter your name" />
+                                        <input  id="input-name" type="text" class="grow" placeholder="Enter your name" />
                                     </label>
 
                                     <div class="py-3"><label for="">Phone Number*</label></div>
                                     <label class="input input-bordered flex items-center gap-2">
-                                        <input type="text" class="" value="" placeholder="Enter your phone number" />
-                                    </label>
+                                        <input type="number" id="input-number" class="grow" placeholder="Enter your phone number" />
+                                      </label>
+                                    <!-- <label class="input input-bordered flex items-center justify-between w-[100%]">
+                                        <input type="" id="input-number"  placeholder="" />
+                                    </label> -->
                                     <div class="py-3"><label for="">Email ID</label></div>
                                     <label class="input input-bordered flex items-center gap-2">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
@@ -489,13 +492,13 @@
                                             <path
                                                 d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z" />
                                         </svg>
-                                        <input type="text" class="grow" placeholder="Enter your email id" />
+                                        <input id="input-email" type="text" class="grow" placeholder="Enter your email id" />
                                     </label>
 
-                                    <button id="input-button"
-                                        class="btn w-full mt-5 text-white hover:text-black hover:bg-[#1cd10067]  bg-[#1DD100] join-item">Next</button>
+                                    <button disabled id="next-button"
+                                        class="btn  w-full mt-5 text-white hover:text-black hover:bg-[#1cd10067]  bg-[#1DD100] join-item">Next</button>
 
-                                </form>
+                                </div>
                             </div>
                             <div class="flex justify-between mt-5">
                                 <p class="underline">Terms and Conditions</p>
@@ -509,6 +512,23 @@
         </section>
 
     </main>
+
+    <!-- gift section -->
+
+    <section id="success" class="hidden">
+        <div class="  w-[90%] md:max-w-[70%] lg:max-w-[40%] mx-auto shadow-2xl m-10 bg-white md:mt-14 p-5 md:p-10 rounded-2xl">
+           <div class="mx-auto flex flex-col justify-center">
+            <img src="./images/success.png" class=" w-10 md:w-24 mx-auto"  alt="">
+            <h2 class="text-2xl font-bold py-5 text-[#27AE60] text-center">SUCCESS</h2>
+            <h3 class=" text-sm md:text-[18px] font-semibold text-center">Thank you for Booking Our Bus Seats. <br>
+                We are working hard to find the best service and deals for you. </h3>
+                <p class=" text-sm md:text-[16px] py-5 text-center">Shortly you will find a confirmation in your email.</p>
+              <div class="flex justify-center">
+                <a class="" href="https://www.facebook.com/profile.php?id=100088142062918"> <button class="btn text-xl font-semibold text-white w-48 mx-auto bg-[#27AE60] px-16 rounded-full">Continue</button></a>
+              </div>
+           </div>
+        </div>
+    </section>
 
     <footer class="bg-[#030712] py-10 mt-10 md:mt-28 md:py-20">
         <div class="container mx-auto max-w-[90%] lg:max-w-[80%] py-5">
