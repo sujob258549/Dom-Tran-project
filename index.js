@@ -76,11 +76,13 @@ applyButton.addEventListener('click', function () {
     const finalTotal = document.getElementById('grand-prise');
     const finalInnerText = finalTotal.innerText;
     const finalPriseFloat = parseFloat(finalInnerText);
+    const applyDiv = document.getElementById('apply-div');
     if (inputField.value === 'NEW15') {
         const discountPrise = finalPriseFloat * 15 / 100;
         const discount = finalPriseFloat - discountPrise;
         finalTotal.innerText = discount;
-        applyButton.setAttribute('disabled', 'true')
+        applyDiv.classList.add('hidden')
+       
 
     }
     else if (inputField.value === 'Couple 20') {
@@ -88,10 +90,12 @@ applyButton.addEventListener('click', function () {
         const discount = finalPriseFloat - discountPrise;
         finalTotal.innerText = discount;
         applyButton.setAttribute('disabled', 'true')
-
+        applyDiv.classList.add('hidden')
     }
     else {
-        alert('Your cupon is wrong!')
+        alert(`Your cupon is wrong! 
+ আপনি ভুল কুপন দিয়েছেন`)
+        
 
     }
 
