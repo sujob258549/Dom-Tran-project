@@ -184,7 +184,7 @@
 
 
         <!-- poribohon section  -->
-        <section class="bg-[#1DD1000a] py-8 md:py-16 border-t-[4px] border-[#1DD100] rounded-t-[50px] mt-10">
+        <section id="tiket-section" class="bg-[#1DD1000a] py-8 md:py-16 border-t-[4px] border-[#1DD100] rounded-t-[50px] mt-10">
 
             <div class="container mx-auto max-w-[90%] lg:max-w-[80%]">
                 <div class=" w-full mx-auto md:w-[70%]">
@@ -206,9 +206,9 @@
                             </div>
 
                             <div class=" md:mx-0 mx-auto mt-5 md:mt-0">
-                                <a
+                                <a 
                                     class="btn w-48 font-medium text-color text-xl bg-[#1DD10014] hover:bg-[#1DD10014] border border-[#1DD100] hover:border-[#1DD100] "><img
-                                        src="./images/seat-green.png" alt=""><span>40</span> Seats left
+                                        src="./images/seat-green.png" alt=""><span id="sit-number">40</span> Seats left
                                 </a>
                             </div>
 
@@ -433,17 +433,26 @@
                         </div>
                         <div class="p-5 bg-slate-100 rounded-xl">
                             <div class="flex justify-between">
+                               <div>
                                 <p class="font-inter font-medium">Seat <span></span></p>
-                                <p class="font-inter font-medium">Class <span></span></p>
-                                <p class="font-inter font-medium">Price <span></span></p>
+                                <p id="sit-list"></p>
+                               </div>
+                               <div>
+                                <p  class="font-inter font-medium">Class <span></span></p>
+                                <p id="sit-class"></p>
+                               </div>
+                                <div>
+                                    <p class="font-inter font-medium">Price <span></span></p>
+                                    <p id="sit-prise"></p>
+                                </div>
                             </div>
 
                             <div class="flex justify-between border-y-2 my-3 border-dashed  ">
                             </div>
                             <div>
                                 <div class="flex justify-between">
-                                    <p class="text-xl font-semibold">Total Price</p>
-                                    <p class="text-xl text-black font-semibold">BDT</p>
+                                    <p class="text-xl font-semibold" > Total Price</p>
+                                    <p class="text-xl text-black font-semibold"><span id="total-prise"></span> BDT</p>
                                 </div>
                                 <div class="join mt-6 w-full pb-5">
                                     <input id="input-fild" type="text" placeholder="Have any copupon?"
@@ -452,8 +461,8 @@
                                         class="btn text-white hover:bg-[#1cd10067]  bg-[#1DD100] join-item">Apply</button>
                                 </div>
                                 <div class="flex justify-between">
-                                    <p class="text-xl font-semibold">Grand Price</p>
-                                    <p class="text-xl text-black font-semibold">BDT</p>
+                                    <p class="text-xl font-semibold">Grand Total</p>
+                                    <p class="text-xl text-black font-semibold"><span id="grand-prise"></span> BDT</p>
                                 </div>
                                 <form action="" class="pt-5">
 
@@ -543,8 +552,7 @@
     </footer>
 
 
-
-
+<script src="index.js"></script>
 </body>
 
 </html>
