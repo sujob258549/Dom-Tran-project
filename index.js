@@ -50,7 +50,7 @@ for (const sits of sit) {
             nextButtons.removeAttribute('disabled')
             prise += 550;
 
-            
+
 
 
             if (count === 4) {
@@ -83,7 +83,7 @@ applyButton.addEventListener('click', function () {
         const discount = finalPriseFloat - discountPrise;
         finalTotal.innerText = discount;
         applyDiv.classList.add('hidden')
-       finalTotal.style.color = '#1DD100';
+        finalTotal.style.color = '#1DD100';
 
     }
     else if (inputField.value === 'Couple 20') {
@@ -91,14 +91,13 @@ applyButton.addEventListener('click', function () {
         const discount = finalPriseFloat - discountPrise;
         finalTotal.innerText = discount;
         applyButton.setAttribute('disabled', 'true')
-        applyDiv.classList.add('hidden')
+        applyDiv.classList.add('hidden');
+        finalTotal.style.color = '#1F8AD2';
     }
     else {
         alert(`Your cupon is wrong! 
  আপনি ভুল কুপন দিয়েছেন`)
-        
-
-    }
+    };
 
 
     inputField.value = '';
