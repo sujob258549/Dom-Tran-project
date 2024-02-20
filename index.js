@@ -83,7 +83,7 @@ applyButton.addEventListener('click', function () {
         const discount = finalPriseFloat - discountPrise;
         finalTotal.innerText = discount;
         applyDiv.classList.add('hidden')
-       
+       finalTotal.style.color = '#1DD100';
 
     }
     else if (inputField.value === 'Couple 20') {
