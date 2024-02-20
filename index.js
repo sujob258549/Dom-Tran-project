@@ -13,7 +13,8 @@ for (const sits of sit) {
             sitInteger -= 1;
             sitNumber.innerText = sitInteger;
             // bg color change and disabled ADD;
-            sits.classList.add('bg-[#1DD100]');
+            sits.style.backgroundColor = '#1DD100';
+            sits.setAttribute('disabled', '');
             // sit list add..........
             const sitList = document.getElementById('sit-list');
             const sitsText = sits.innerText;
@@ -49,7 +50,7 @@ for (const sits of sit) {
             nextButtons.removeAttribute('disabled')
             prise += 550;
 
-            sits.classList.remove('sit');
+            
 
 
             if (count === 4) {
